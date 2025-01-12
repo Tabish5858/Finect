@@ -1,0 +1,675 @@
+/*
+* ----------------------------------------------------------------------------------------
+
+Website Name: FINECT
+Version      :1.0                                         
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.IMPORT FONT FAMILY
+* 02.ROOT CSS STYLE
+* 03.RESET CSS STYLE
+* 04.TYPOGRAPHY CSS STYLE
+* 05.GLOBAL CSS STYLE
+* 06.HEADER CSS STYLE
+
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.IMPORT FONT FAMILY
+* ----------------------------------------------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/HelveticaNowDisplay-RegIta.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/HelveticaNowDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/HelveticaNowDisplay-BoldIta.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/HelveticaNowDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/HelveticaNowDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/HelveticaNowDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.ROOT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+:root {
+    /* Color variables */
+    --primaryColor: #DCE1F5;
+    --secondaryColor: #FF5277;
+
+    /* Background color variables */
+    --background: #3C44D7;
+    --button-bg: #5057DB;
+
+    /* border colors  */
+    --border-1: #A3AFEA;
+    --border-2: #F4F4FF;
+
+    /* gradients  */
+    --gradient-main: linear-gradient(180deg, #3C44D7 0%, #6E41A9 23%, #3C44D7 77.5%, #E2E2E2 100%);
+    --gradient-secondary: linear-gradient(0deg, #4c53d100 0%, #4C53D1 3.92%, #2A30A8 28.5%, #2A2D67 100%);
+    --gradient-text: linear-gradient(180deg, #F1F1F1 0%, #BEC3F5 100%);
+
+    /* Font family variables */
+    --font-main: "Helvetica Now Display", sans-serif;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* RESET CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+    }
+
+
+    html,
+    body {
+        height: 100%;
+        font-size: 100%;
+        line-height: 1.5;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        font-family: var(--font-main), sans-serif;
+        line-height: 1;
+        background: var(--background);
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: "";
+    }
+
+    input:focus,
+    button:focus {
+        outline: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    select {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        background-color: #000;
+        -webkit-text-fill-color: #000;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .container {
+        overflow-y: visible !important;
+    }
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04.TYPOGRAPHY CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+@layer components {
+
+    h1,
+    .h1 {
+        font-size: 75px;
+        line-height: 75px;
+        font-weight: 400;
+        font-family: var(--font-main);
+        letter-spacing: 0.03em;
+    }
+
+    h2,
+    .h2 {
+        font-size: 50px;
+        line-height: 75px;
+        font-weight: 500;
+        font-family: var(--font-main);
+        letter-spacing: 0.03em;
+    }
+
+    h3,
+    .h3 {
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 400;
+        font-family: var(--font-main);
+        letter-spacing: 0.03em;
+    }
+
+    h4,
+    .h4 {
+        font-size: 28px;
+        line-height: 35px;
+        font-weight: 400;
+        font-family: var(--font-main);
+        letter-spacing: 0.02em;
+    }
+
+    h5,
+    .h5 {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 400;
+        font-family: var(--font-main);
+        letter-spacing: 0.02em;
+    }
+
+    h6,
+    .h6 {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        font-family: var(--font-secondary);
+        letter-spacing: 0.05em;
+    }
+
+    p,
+    .p {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        font-family: var(--font-secondary);
+        letter-spacing: 0.02em;
+    }
+
+    a,
+    .a {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        font-family: var(--font-main);
+    }
+
+    button,
+    .button {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        font-family: var(--font-main);
+    }
+
+    @media screen and (max-width: 1023px) {
+
+        h1,
+        .h1 {
+            font-size: 60px;
+            line-height: 60px;
+        }
+
+        h2,
+        .h2 {
+            font-size: 40px;
+            line-height: 60px;
+        }
+
+        h3,
+        .h3 {
+            font-size: 35px;
+            line-height: 50px;
+        }
+
+        h4,
+        .h4 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        h5,
+        .h5 {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        h6,
+        .h6 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        p,
+        .p {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        a,
+        .a {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        button,
+        .button {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+
+        h1,
+        .h1 {
+            font-size: 45px;
+            line-height: 45px;
+        }
+
+        h2,
+        .h2 {
+            font-size: 35px;
+            line-height: 50px;
+        }
+
+        h3,
+        .h3 {
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        h4,
+        .h4 {
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        h5,
+        .h5 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        h6,
+        .h6 {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        a,
+        .a {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button,
+        .button {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05.GLOBAL CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+@layer components {
+    .hover1 {
+        padding: 10px 16px;
+        background-color: transparent;
+        border-radius: 7.5px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border: 1px solid transparent;
+        background-color: var(--button-bg);
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+    }
+
+    .hover1:hover {
+        border: 1px solid var(--secondaryColor);
+        background-color: var(--secondaryColor);
+    }
+
+    .hover2 {
+        padding: 10px 16px;
+        background-color: var(--secondaryColor);
+        border-radius: 7.5px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border: 1px solid transparent;
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+    }
+
+    .hover2:hover {
+        border: 1px solid var(--secondaryColor);
+        background-color: transparent;
+    }
+
+    .active,
+    .linkhover:hover {
+        color: var(--secondaryColor)
+    }
+
+    @media screen and (max-width: 1279px) {
+
+        .hover2,
+        .hover1 {
+            padding: 10px 12px;
+        }
+
+        .container {
+            max-width: unset !important;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .hover1 {
+            padding: 14px 30px;
+            width: 100%;
+        }
+    }
+
+    .animate-paused {
+        animation-play-state: paused;
+    }
+
+    .gradient-text {
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06.HEADER CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+@layer components {
+    .aside-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .aside-menu.open {
+        transform: translateX(0);
+    }
+
+    .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+    }
+
+    .dropdown-menu.open {
+        opacity: 1;
+        visibility: visible;
+        max-height: 500px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: 500px;
+    }
+
+    .aside-dropdown:has(.active) .justify-between,
+    .dropdown:has(.active) .items-center {
+        color: var(--secondaryColor);
+    }
+}
+
+
+/* backgrounds  */
+@layer components {
+    .bg-ribbion::after {
+        position: absolute;
+        content: "";
+        background: rgba(255, 82, 119, 0.2);
+        filter: blur(50px);
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+
+    .bg-ribbion::before {
+        position: absolute;
+        content: "";
+        background: url("../images/bg/ribbion_1.png");
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+        clip-path: inset(0 40% 0 0);
+        transition: clip-path 1.5s ease;
+    }
+
+    .bg-ribbion.animate::before {
+        clip-path: inset(0 0 0 0);
+    }
+
+    @keyframes ribbionReveal {
+        0% {
+            clip-path: inset(0 30% 100% 0);
+        }
+
+        50% {
+            clip-path: inset(0 0 100% 0);
+        }
+
+        100% {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    .bg-ribbion2::before {
+        position: absolute;
+        content: "";
+        background: url("../images/bg/ribbion_2.png");
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 1.5s ease;
+    }
+
+    .bg-ribbion2.animate::before {
+        animation: ribbionReveal 5s ease forwards;
+    }
+
+    .bg-dotted_bg {
+        transition: background-position 1.5s ease-in;
+        will-change: background-position;
+    }
+
+    @media screen and (max-width: 991px) {
+        .bg-ribbion::before {
+            top: 10%;
+        }
+
+        .bg-ribbion::after {
+            filter: blur(30px);
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .bg-ribbion::before {
+            background-size: contain;
+            background-position: center;
+            top: -5%;
+        }
+
+        .bg-ribbion2:before {
+            background-position: right;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .bg-ballbgmobile {
+            background-size: 100% 77% !important;
+            background-position-y: bottom !important;
+        }
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
