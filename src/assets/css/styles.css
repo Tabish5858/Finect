@@ -607,7 +607,7 @@ Version      :1.0
         }
 
         50% {
-            clip-path: inset(0 0 100% 0);
+            clip-path: inset(0 0 50% 0);
         }
 
         100% {
@@ -632,7 +632,7 @@ Version      :1.0
     }
 
     .bg-ribbion2.animate::before {
-        animation: ribbionReveal 5s ease forwards;
+        animation: ribbionReveal 3s ease forwards;
     }
 
     .bg-dotted_bg {

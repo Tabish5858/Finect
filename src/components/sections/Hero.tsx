@@ -7,16 +7,16 @@ const Hero: React.FC = () => {
   const subtitleRef = useRef<HTMLHeadingElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
   const dividerRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' }});
 
     tl.set([yearRef.current, subtitleRef.current, logoRef.current], {
       y: 100,
-      opacity: 0
+      opacity: 0,
     })
       .to([yearRef.current, subtitleRef.current, logoRef.current], {
-        duration: 2.5,
+        duration: 4,
         y: 0,
         opacity: 1,
         stagger: 0

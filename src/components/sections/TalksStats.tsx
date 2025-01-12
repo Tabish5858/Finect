@@ -12,6 +12,10 @@ const TalksStats: React.FC = () => {
                     entry.target.classList.remove('animate');
                 }
             },
+            {
+                rootMargin: '200px 0px 0px 0px',
+                threshold: 0
+            }
         );
 
         const currentSection = sectionRef.current;
@@ -29,11 +33,11 @@ const TalksStats: React.FC = () => {
 
     return (
         <div className='md:pt-100'>
-            <section 
-                ref={sectionRef} 
+            <section
+                ref={sectionRef}
                 className='lg:pt-100 lg:pb-72 md:py-70 py-50 relative bg-ribbion2 z-100 overflow-visible'
             >
-                <div className="container">
+                <div className="container md:pt-100">
                     <div className="flex flex-col text-white lg:pt-100 md:pt-70 pt-100">
                         <h3 className='md:w-full w-4/5'>Récord en Finect Talks con más de</h3>
                         <h1 className='xl:text-[300px] lg:text-[220px] md:text-[180px] leading-none w-min float-right sm:text-9xl text-8xl'>395K</h1>
@@ -42,7 +46,6 @@ const TalksStats: React.FC = () => {
                 </div>
             </section>
         </div>
-
     )
 }
 

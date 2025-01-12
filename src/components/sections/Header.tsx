@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     <>
       <header className="bg-[#3c44d7] text-white w-full fixed top-0 z-[9999]">
         <div
-          className="container mx-auto flex justify-between items-center py-6 px-6"
+          className="container mx-auto flex justify-between items-center py-3"
           data-aos="fade-down"
         >
 
