@@ -32,7 +32,7 @@ const TalksStats: React.FC = () => {
     }, []);
 
     return (
-        <div className='relative md:pt-100 before:absolute before:content-[""] before:top-[-20%] before:left-0 before:w-full before:h-[40%] before:bg-[#5a60ca] before:blur-[50px] before:opacity-50 before:-z-100'>
+        <div className='relative md:pt-100 before:absolute before:content-[""] before:top-[-5%] before:left-0 before:w-[115%] before:h-[10%] before:bg-[#5a60ca] before:blur-[30px] before:-z-100'>
             <section
                 ref={sectionRef}
                 className='lg:pt-100 lg:pb-72 md:py-70 py-50 relative bg-ribbion2 z-100 overflow-visible '
