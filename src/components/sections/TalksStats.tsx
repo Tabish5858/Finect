@@ -32,10 +32,10 @@ const TalksStats: React.FC = () => {
     }, []);
 
     return (
-        <div className='md:pt-100'>
+        <div className='relative md:pt-100 before:absolute before:content-[""] before:top-[-20%] before:left-0 before:w-full before:h-[40%] before:bg-[#5a60ca] before:blur-[50px] before:opacity-50 before:-z-100'>
             <section
                 ref={sectionRef}
-                className='lg:pt-100 lg:pb-72 md:py-70 py-50 relative bg-ribbion2 z-100 overflow-visible'
+                className='lg:pt-100 lg:pb-72 md:py-70 py-50 relative bg-ribbion2 z-100 overflow-visible '
             >
                 <div className="container md:pt-100">
                     <div className="flex flex-col text-white lg:pt-100 md:pt-70 pt-100">

@@ -38,12 +38,12 @@ const ProductStats: React.FC = () => {
             <div className="container">
                 <div className="flex md:flex-row flex-col text-white lg:gap-5 gap-3">
                     <div className="md:w-2/5">
-                        <figure>
+                        <figure className='flex justify-center items-center'>
                             <img 
                                 ref={imageRef}
                                 src={diamondCircleImg} 
                                 alt="diamondCircleImg" 
-                                className='w-full'
+                                className='md:w-full w-4/5'
                             />
                         </figure>
                     </div>
@@ -51,7 +51,7 @@ const ProductStats: React.FC = () => {
                         <div className='flex flex-col h-full justify-end md:text-start text-center'>
                             <h3>Más de</h3>
                             <h1 className='xl:text-[280px] lg:text-[200px] md:text-[150px] text-[100px] leading-none md:w-min md:float-left sm:text-8xl text-7xl'>3.000</h1>
-                            <h3>Comparaciones de productos de inversión <span className='text-secondary'>al día</span></h3>
+                            <h3 className='md:w-full w-11/12 md:mx-0 mx-auto'>Comparaciones de productos de inversión <span className='text-secondary'>al día</span></h3>
                         </div>
                     </div>
                 </div>

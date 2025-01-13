@@ -12,7 +12,7 @@ const FinancialAdvice: React.FC = () => {
         if (section) {
             gsap.fromTo(section,
                 {
-                    backgroundPosition: "-50% -50%",
+                    backgroundPosition: "80% 80%",
                 },
                 {
                     backgroundPosition: "100% 100%",

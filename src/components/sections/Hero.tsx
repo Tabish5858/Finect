@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   const dividerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' }});
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     tl.set([yearRef.current, subtitleRef.current, logoRef.current], {
       y: 100,
@@ -25,12 +25,12 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex lg:pb-100 md:pb-70 pb-50 lg:pt-36 md:pt-28 pt-70">
+    <section className="min-h-screen flex lg:pb-100 md:pb-70 pb-50 lg:pt-36 md:pt-28 pt-70 bg-hero relative">
       <div className="container flex flex-col flex-grow">
-        <div className="flex md:justify-between justify-center lg:gap-8 md:gap-5 gap-4 flex-grow md:flex-row flex-col ">
+        <div className="flex md:justify-between justify-center lg:gap-8 md:gap-5 gap-4 flex-grow md:flex-row flex-col items-center">
           {/* Logo */}
-          <div className="md:w-2/5 overflow-hidden">
-            <figure className="flex flex-col flex-grow justify-center items-center h-full "
+          <div className="md:w-2/5 overflow-hidden h-max">
+            <figure className="flex flex-col flex-grow justify-center items-center h-max "
               ref={logoRef}
             >
               <img
@@ -44,12 +44,12 @@ const Hero: React.FC = () => {
           {/* Divider (No animation) */}
           <div
             ref={dividerRef}
-            className="bg-borderColor-border2 md:w-1 w-full md:h-full h-1 self-stretch md:block hidden"
+            className="bg-borderColor-border2 md:w-[2px] w-full md:h-full h-1 md:block hidden max-h-[185px]"
           />
 
           {/* Text */}
-          <div className="md:w-2/5">
-            <div className="flex flex-col text-center justify-center h-full overflow-hidden md:gap-0 gap-4">
+          <div className="md:w-2/5 h-max">
+            <div className="flex flex-col text-center justify-center h-max overflow-hidden md:gap-0 gap-4">
               <div className="overflow-hidden">
                 <h1 ref={yearRef} className="gradient-text md:text-9xl text-[116px] lead transform-gpu leading-none">
                   2024

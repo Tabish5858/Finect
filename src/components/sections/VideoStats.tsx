@@ -36,7 +36,7 @@ const VideoStats: React.FC = () => {
     }, []);
 
     return (
-        <section className='lg:py-100 md:py-70 py-50 relative bg-cover bg-no-repeat bg-center after:absolute after:content-[""] after:bg-secondary after:opacity-10 after:blur-[50px] after:w-full after:h-1/3 after:bg-contain after:bg-top after:bg-no-repeat after:top-0 after:left-0 after:z-[10]'>
+        <section className='lg:py-100 md:py-70 py-50 md:pt-0 pt-100 relative bg-cover bg-no-repeat bg-center after:absolute after:content-[""] after:bg-secondary after:opacity-10 after:blur-[50px] after:w-full after:h-1/3 after:bg-contain after:bg-top after:bg-no-repeat after:top-0 after:left-0 after:z-[10]'>
             <div className="container">
                 <div className="flex flex-col text-center text-white items-center">
                     <h1 className='xl:text-[300px] lg:text-[220px] md:text-[180px] leading-none w-min float-right sm:text-9xl text-8xl'>+100K</h1>
@@ -48,7 +48,7 @@ const VideoStats: React.FC = () => {
                     ref={imageRef}
                     src={videoStatsGraph}
                     alt="graph"
-                    className='w-full h-full md:min-h-full min-h-[50vh] md:mt-0 mt-10'
+                    className='w-full h-full md:min-h-full min-h-[50vh] md:mt-0 mt-3'
                 />
             </figure>
         </section>

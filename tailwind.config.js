@@ -55,6 +55,7 @@ module.exports = {
         ballbg: "url('../images/bg/ball_bg.png')",
         ballbgmobile: "url('../images/bg/ball_bg_mobile.png')",
         graphbg: "url('../images/bg/Graph.png')",
+        ballImg: "url('../images/index/ball.png')",
       },
       keyframes: {
         slideFadeTwistEntrance: {

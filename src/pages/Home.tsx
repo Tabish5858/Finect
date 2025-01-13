@@ -17,15 +17,11 @@ const Home: React.FC = () => {
         <FinancialAdvice />
         <VideoStats />
       </div>
-      <div className='bg-background-gradientSecondary'>
-        <AlphaStats />
+      <AlphaStats />
+      <div className='relative bg-gradient-to-b from-[#4c53d100] via-[#4C53D1] via-[-100%] via-[#2A30A8] via-[28.5%] to-[#2A2D67]'>
         <TalksStats />
-        <div className='bg-[#2a30a0]'>
-          <ProductStats />
-        </div>
-        <div className='bg-[#2a2f85]'>
-          <ETFStats />
-        </div>
+        <ProductStats />
+        <ETFStats />
       </div>
     </div>
   )
