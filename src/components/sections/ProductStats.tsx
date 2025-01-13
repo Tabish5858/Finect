@@ -36,7 +36,7 @@ const ProductStats: React.FC = () => {
     return (
         <section className='lg:py-100 md:py-70 py-50 relative'>
             <div className="container">
-                <div className="flex md:flex-row flex-col text-white lg:gap-5 gap-3">
+                <div className="flex md:flex-row flex-col text-white lg:gap-10 gap-5">
                     <div className="md:w-2/5">
                         <figure className='flex justify-center items-center'>
                             <img 
