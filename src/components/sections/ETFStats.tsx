@@ -47,7 +47,7 @@ const ETFStats: React.FC = () => {
                 <div className='relative z-10 flex flex-col text-white md:mb-0 lg:pb-32 md:pb-24 py-50 pb-44'>
                     <h3 className='md:w-full w-11/12'>El interés por los ETFs se dispara:</h3>
                     <h3 className='text-secondary'>crecimiento del</h3>
-                    <div className='flex md:items-end md:flex-row flex-col'>
+                    <div className='flex md:items-end md:flex-row flex-col lg:gap-2'>
                         <h1 className='xl:text-[250px] lg:text-[200px] md:text-[150px] leading-none w-min float-right sm:text-9xl text-8xl'>187% </h1>
                         <h2 className='lg:text-7xl text- md:mb-7 text-secondary'>YTD</h2>
                     </div>
