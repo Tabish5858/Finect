@@ -751,11 +751,11 @@ Version      :1.0
         }
         @keyframes moveBg {
             0% {
-                background-position: 79% 47%;
+                background-position: 73% 50%;
             }
 
             100% {
-                background-position: 83% 45%;
+                background-position: 83.5% 45%;
             }
         }
     }
